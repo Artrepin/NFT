@@ -1,0 +1,125 @@
+.promo-page {
+	min-height: 400px;
+	position: relative;
+	background: linear-gradient(235.94deg, #3340b4 14.9%, #4a59de 89.7%);
+	overflow: hidden;
+	height: 100vh;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+		background: rgba(10, 18, 91, 0.83);
+		z-index: 2;
+	}
+	&__bg {
+		position: absolute;
+		width: 150%;
+		height: 150%;
+		top: -25%;
+		left: -25%;
+		z-index: 1;
+		transform: rotate(15deg);
+		&-1 {
+			width: 100%;
+			height: 100%;
+			background-image: url(../img/promo-page/bg-small.png);
+			background-repeat: repeat;
+			-webkit-animation: line_menu 600s linear infinite;
+			animation: line_menu 600s linear infinite;
+		}
+		&-2 {
+			margin-top: 16px;
+			width: 100%;
+			height: 100%;
+			background-image: url(../img/promo-page/bg-small.png);
+			background-repeat: repeat;
+			-webkit-animation: line_menu 600s linear infinite;
+			animation: line_menu 600s linear infinite;
+		}
+	}
+	&__wrap {
+		max-width: 580px;
+		margin: 0px auto;
+		padding: 15px;
+		position: relative;
+		z-index: 10;
+		text-align: center;
+	}
+	&__logo {
+		display: block;
+		width: 300px;
+		margin: 0px auto;
+	}
+	&__subtitle {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 190%;
+		letter-spacing: 0.01em;
+		color: #ffffff;
+		margin: 30px auto;
+	}
+	&__social {
+		justify-content: center;
+	}
+	&__link {
+		display: block;
+		width: 64px;
+		height: 64px;
+		margin: 0px 10px;
+		svg {
+			& * {
+				transition: all 0.3s;
+			}
+		}
+		&:hover {
+			svg {
+				circle {
+					fill: #23a9f4;
+					transition: all 0.3s;
+				}
+				path {
+					fill: #fff;
+					transition: all 0.3s;
+				}
+			}
+		}
+	}
+}
+@-webkit-keyframes line_menu {
+	from {
+		background-position: -1000% 0%, 0 0;
+	}
+	to {
+		background-position: 0 0%;
+	}
+}
+@keyframes line_menu {
+	from {
+		background-position: -1000% 0%, 0 0;
+	}
+	to {
+		background-position: 0 0%;
+	}
+}
+@media (max-width: 760px) {
+	.promo-page {
+		&__logo {
+			width: 250px;
+		}
+		&__subtitle {
+			font-size: 16px;
+			line-height: 160%;
+			margin: 20px auto 25px;
+		}
+		&__link {
+			width: 55px;
+			height: 55px;
+		}
+		&__wrap {
+			margin-top: -100px;
+		}
+	}
+}
